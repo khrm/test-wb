@@ -1,7 +1,5 @@
-# Dockerfile for lighttpd
-
 FROM alpine
 
-CMD top
+CMD ["watch", "-n", "1000", "echo", "running", "demo"]
 
 
