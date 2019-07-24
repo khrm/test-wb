@@ -1,5 +1,5 @@
 FROM alpine
 
-CMD ["watch", "-n", "1000", "echo", "running", "demo"]
+COPY ./README.md README.md
 
-
+CMD ["sh","-c", "echo StartingDemo && watch '{ echo -ne 'HTTP/1.0 200 OK\r\n\r\n'; cat README.md; } | nc -l -p 8080'"]
